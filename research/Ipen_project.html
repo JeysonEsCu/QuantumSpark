@@ -3,15 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>Ipen project</title>
+    <title>Tc-99m Project</title>
   </head>
   <body>
-    Size effect of MoO<sub>3</sub> on the production of Tc-99m
+    <h2 class="subtitle">
+      Size effect of MoO<sub>3</sub> on the production of <sup>99m</sup>Tc
+    </h2>
+    <p class="text">
+      <sup>99m</sup>Tc can be obtained through beta decay of <sup>99</sup>Mo,
+      which is produced in a fission nuclear reactor when a neutron interacts
+      with a <sup>98</sup>Mo nucleus, converting it into <sup>99</sup>Mo, an
+      instable beta emitting isotope.
+      <br />
+      The instability of <sup>98</sup>Mo is resolved when one neutron in the
+      nucleus undergoes beta decay, transforming into a proton and emitting an
+      electron which is expelled (known as a beta particle). This process
+      increases the atomic number while keeping constant the number of nucleons,
+      transforming into an instable Technetium isotope.
+      <br />
+      Due to the continuos energy spectrum of beta particles, two important
+      isotopes are produced, <sup>99</sup>Tc and <sup>99m</sup>Tc with a
+      half-life of 2.111 x 10<sup>5</sup> years and 6 hours respectively. The
+      latter isotope is widely used in nuclear medicine and the focus of the
+      project.
+      <br />
+      The first steps was taking the same MoO<sub>3</sub> powder used in the
+      radioisotope production plant (PPR) at the Peruvian Nuclear Energy
+      Institute (IPEN) and characterize it using sieves of different sizes to
+      create a size distribution histogram. Since this process is does not cover
+      a wide range of particle sizes, the next step involved was wet milling
+      with ethanol as the liquid phase, applying different milling times to
+      achieve a more uniform size distribution.
+      <br />
+      However, mechanical methods have limitations in the particle sizes they
+      can produce. To cover a further size range, MoO<sub>3</sub> nanoparticles
+      were employed. All samples were characterized using scanning electron
+      microscopy (SEM).
+      <br />
+      Some important considerations that had to be taken into account included
+      the neutron flux at the irradiation position in the reactor and the energy
+      range of neutrons interacting with the molybdenum target. To determine the
+      neutron flux in irradiation position, flux monitors were used. These
+      consisted of thin sheets with known purity: cupper (<sup>63</sup>Cu) and
+      indium (<sup>115</sup>In) for epithermal neutron flux and gold
+      (<sup>197</sup>Au) for thermal neutron flux, which were irradiated
+      together inside the irradiation can (container where the target is
+      placed).
+      <br />
+      After, the irradiation period, the samples were returned and stored in a
+      lead box until the radiation level was low enough to be safely handled.
+      Once safe, the samples were measured using a gamma spectrometer to
+      determine the neutron flux in the two energy intervals at this power.
+      Depending on the activity of the samples, the gamma spectrometer could be
+      with either of the two hyper pure-Ge detector geometry (two-pi or
+      four-pi).
+      <br />
+      Before sending the samples to the reactor, they had to be prepared for
+      placement in the irradiation can. Two methods were used: the first was
+      making "<strong>pills</strong>" with the powders of different sizes, which
+      were then sealed in plastic bags, labeled and separated with aluminum
+      foil. The second method used small PET containers, where the mass of
+      MoO<sub>3</sub>
+      powder was calculated by measuring the difference between the full
+      container and the empty container.
+      <br />
+      Both techniques used to package the samples has to ensure that they
+      remained in the same position into the container. This was achieved by
+      using PET sponges at the top of the container to fill the empty space.
+      After sealing the PET container, it was placed into another container
+      named
+      <strong>irradiation can</strong> and sealed. Before being sent to the
+      reactor, the irradiation can had to pass a "<strong>leak test</strong>".
+      <br />
+      Once all tests were successfully completed, the irradiation container was
+      sent to the reactor for a previously calculated time at the reactor's
+      power the neutron flux monitor were irradiated. After the irradiation
+      period, and a necessary decay period to reduce the radiation level, the
+      samples were measured in a gamma spectrometer to determine the activity of
+      the produced <sup>99m</sup>Tc. The preliminary results were reported and
+      presented at the Iberoamerican congress of Chemsitry in 2018.
+      <br />
+      For reference on energy levels and decay schemes of the isotopes, consult
+      the
+      <a
+        href="https://www-nds.iaea.org/relnsd/vcharthtml/VChartHTML.html"
+        id="nuclides-link"
+        >Chart of Nuclides</a
+      >.
+    </p>
+    <div class="iframe_style" id="iframe-container">
+      <iframe id="iframe-content"></iframe>
+    </div>
     <a href="/index.html" class="button_home">Back to Home</a>
+    <!--Javascript: script from the frame in the webpage-->
+    <script>
+      document
+        .getElementById("nuclides-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("iframe-content").src = this.href;
+        });
+    </script>
   </body>
 </html>
